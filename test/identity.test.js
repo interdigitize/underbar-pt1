@@ -9,6 +9,10 @@ describe('identity()', () => {
     expect(_.identity(5)).toBe(5);
   });
 
+  it('returns the string if given a string', () => {
+    expect(_.identity("Groot")).toBe("Groot");
+  });
+
   it('returns the same array if given an array', () => {
     const val = [1, 2, 3];
     expect(_.identity(val)).toBe(val);
