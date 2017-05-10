@@ -23,4 +23,22 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('filters object properties to only those with strings values', () => {
+    const characterAttributes = {
+      name: 'Groot',
+      honorific: 'I am',
+      race: 'tree thing',
+      class: 'guardian',
+      strength: 12,
+      constitution: 7,
+      dexterity: 10,
+      intelligence: 2,
+      wisdom: 12,
+      charisma: 5
+    };
+    const qualitativeCharacteristics = _.filter(characterAttributes, (value) => isNaN(value));
+    expect(qualitativeCharacteristics).toEqual(['Groot', 'I am', 'tree thing', 'guardian']);
+  });
+
 });
