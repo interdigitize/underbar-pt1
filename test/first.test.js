@@ -12,4 +12,7 @@ describe('first()', () => {
   it('returns the whole array if you ask for more elements than it has', () => {
     expect(_.first(['a', 'b', 'c'], 5)).toEqual(['a', 'b', 'c']);
   });
+  it('returns the first 3 elements of an array', () => {
+    expect(_.first(["It's", "a", "dance-off", "bro"], 3)).toEqual(["It's", "a", "dance-off"]);
+  });
 });
