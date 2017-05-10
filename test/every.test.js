@@ -18,4 +18,14 @@ describe('every()', () => {
     });
 
   });
+  describe('processing an array of strings', () => {
+    it('returns true if all words are the same', () => {
+      const words = ['yes', 'yes', 'yes', 'yes', 'yes'];
+      expect(_.every(words, word => word === word)).toBe(true);
+    });
+    it('returns false if there is a word different than the others', () => {
+      const words = ['yes', 'no', 'yes', 'yes', 'yes'];
+      expect(_.every(words, word => word === word)).toBe(true);
+    });
+  });
 });
