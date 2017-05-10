@@ -40,7 +40,7 @@ describe('each()', () => {
     expect(count).toBe(3);
   });
 
-  it('iterates every propety of an object and, passing the value, the corresponding key, and the entire object to the callback', () => {
+  it('iterates every propety of an object and checks they typeof value, passing the value, the corresponding key, and the entire object to the callback', () => {
     const obj = {
       name: 'Groot',
       age: 5,
