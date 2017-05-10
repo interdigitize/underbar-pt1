@@ -18,4 +18,16 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+  it('returns true for a legitly legit array', () => {
+    expect(_.isArrayLike(['I', 'am', 'Groot', '.'])).toBe(true);
+  });
+
+  it('returns false for an object without a length property', () => {
+    const noLengthPropObj = {
+      name: 'Groot',
+    }
+    expect(_.isArrayLike(noLengthPropObj)).toBe(false);
+  });
+
 });
