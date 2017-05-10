@@ -31,4 +31,14 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns true if the array contains the target string', () => {
+    const nuts = ['almond', 'cashew', 'pecan', 'hazelnut', 'pinenut'];
+    expect(_.contains(nuts, 'cashew')).toBe(true);
+  });
+
+  it('returns false if the array does not contains the target string', () => {
+    const nuts = ['almond', 'cashew', 'pecan', 'hazelnut', 'pinenut'];
+    expect(_.contains(nuts, 'walnut')).toBe(false);
+  });
+
 });
